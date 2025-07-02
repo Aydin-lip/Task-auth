@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 100vw;
+  height: 100vh;
+  a {
+    text-decoration: none;
+    margin-left: 0.5rem;
+  }
+}

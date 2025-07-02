@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+.formBox {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 25px;
+  }
+  span {
+    display: inline-block;
+    margin-top: .5rem;
+    margin-left: .3rem;
+    font-size: .8rem;
+    color: #2e2e2e;
+    a {
+      margin-left: .3rem;
+      text-decoration: none;
+    }
+  }
+}
