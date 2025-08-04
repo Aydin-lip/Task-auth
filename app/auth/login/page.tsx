@@ -15,6 +15,13 @@ type FormData = {
 };
 
 const validation = {
+  phone: {
+    required: 'Phone is required',
+    pattern: {
+      value: /^09\d{9}$/i,
+      message: 'The phone number is invalid.'
+    }
+  },
   username: {
     required: 'Username is required',
     minLength: {
@@ -23,7 +30,7 @@ const validation = {
     },
     pattern: {
       value: /^[a-zA-Z][a-zA-Z0-9._]*$/i,
-      message: 'Structure is faild'
+      message: 'The username structure is incorrect.'
     }
   },
   password: {
@@ -66,6 +73,12 @@ export default function LoginPage() {
         <h2>LOGIN</h2>
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(onSubmit)} noValidate>
+            <Input
+              label="Phone"
+              type="text"
+              name="phone"
+              validations={validation.phone}
+            />
             <Input
               label="Username"
               type="text"

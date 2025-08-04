@@ -13,7 +13,7 @@ type InputProps = {
   validations?: any
 }
 
-export const Input = ({ label, type, name, placeholder, defaultValue, className, validations }: InputProps) => {
+export const Input = ({ label, type, name, placeholder, defaultValue, className, validations, }: InputProps) => {
   const [show, setShow] = useState<boolean>(false)
   const {
     register,
@@ -35,8 +35,9 @@ export const Input = ({ label, type, name, placeholder, defaultValue, className,
       <input
         id={label}
         type={show ? 'text' : type}
-        placeholder={placeholder ?? label}
+        placeholder={" "}
         {...register(name, validations)}
+        style={error ? { borderColor: '#f66e6e' } : {}}
       />
       <label htmlFor={label} className={getValues(name) ? styles.filled : ''}>{label}</label>
       {type === 'password' &&

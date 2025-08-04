@@ -18,9 +18,9 @@
       border-color: #0070f3;
     }
 
-    &:focus + label,
-    &:not(:placeholder-shown) + label,
-    &:-webkit-autofill + label {
+    &:focus+label,
+    &:not(:placeholder-shown)+label,
+    &:-webkit-autofill+label {
       top: 0rem;
       left: 0.3rem;
       font-size: 0.7rem;
