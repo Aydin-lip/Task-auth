@@ -35,7 +35,7 @@ export const Input = ({ label, type, name, placeholder, defaultValue, className,
       <input
         id={label}
         type={show ? 'text' : type}
-        placeholder={" "}
+        placeholder={placeholder ?? " "}
         {...register(name, validations)}
         style={error ? { borderColor: '#f66e6e' } : {}}
       />
